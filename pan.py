@@ -8,15 +8,7 @@ print(se.loc[1])  # print the Series value at label 1 using .loc
 print(se.iloc[6])  # print the Series value at integer position 6 using .iloc
 print(se[se < 3])  # apply boolean indexing to the Series and print values less than 3
 
-titanic = pd.read_csv("titanic.csv")  # read passenger data from a CSV file into a DataFrame
-# Ensure Age is numeric before comparing, converting invalid values to NaN
-age_values = pd.to_numeric(titanic["Age"], errors="coerce")
-age = titanic[age_values > 25]  # filter rows where the Age column is greater than 25
-print(age)  # print the filtered DataFrame rows
-
-titanic.shape  # access the shape of the original DataFrame (rows, columns)
-age.shape  # access the shape of the filtered DataFrame
-
+ 
 multi_data = titanic[["Name", "Age"]]  # select the Name and Age columns from the DataFrame
 print(multi_data)  # print the selected columns subset
 
