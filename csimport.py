@@ -14,5 +14,6 @@ print(df["Survived"])  # print the 'Survived' column of the DataFrame
 #selection by rows
 
 #print(df.loc[1])
-print(df.loc["John Smith", ["Age", "Survived"]])
+#print(df.loc["John Smith", ["Age", "Survived"]])
 
+df.iloc[0:4:3]  # print the first row of the DataFrame using integer location-based indexing 
